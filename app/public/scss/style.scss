@@ -1,0 +1,342 @@
+@charset "utf-8";
+@import url(./fonts.css);
+@import url(./reset.css);
+
+$maincolor:#120A30;
+$subcolor:#1B1546;
+$buttoncolor:#322D59;
+$koreacolor:#3395FE;
+$globalcolor:#D74696;
+
+#root {
+    width:100%;
+    #wrap {
+        width:100%;
+        .wrap-gap {
+            max-width:720px;
+            width:100%;
+            margin:0 auto;
+            background:$subcolor;
+            .main-wrap {
+                    width:100%;
+                    height:100vh;
+                    display:flex;
+                    .content-gap {
+                        width:100%;
+                        margin:auto;
+                        padding:0 80px 0 80px;
+                        .content-wrap {
+                            width:100%;
+                            .logo-image {
+                                width:100%;
+                                padding:0 0 60px 0;
+                                img {
+                                    width:100%;
+                                }
+                            }
+                            .buttons {
+                                width:100%;
+                                padding:0 0 17px 0;
+                                .button-wrap {
+                                    padding:15px 0;
+                                    width:100%;
+                                    a {
+                                        display:block;
+                                        width:100%;
+                                        background:$buttoncolor;
+                                        color:#fff;
+                                        font-size:35px;
+                                        text-align:center;
+                                        padding:20px 0;
+                                        border-radius:10px;
+                                    }
+                                }
+                            }        
+                        }
+                    }
+            }
+            .vote-wrap {
+                // 헤더 부분 조금 이따가
+
+                .team-pick {
+                    width:100%;
+                    padding:40px 80px;
+                    .title {
+                        width:100%;
+                        .title-gap {
+                            width:100%;
+                            .title-wrap {
+                                width:100%;
+                                p {
+                                    text-align:center;
+                                    padding:5px 0;
+                                    font-size:25px;
+                                }
+                            }
+                        }
+                    }
+                    .counting {
+                        width:100%;
+                        .counting-gap {
+                            width:100%;
+                            padding:15px 0;
+                            display:flex;
+                            .counting-wrap {
+                                margin:0 auto;
+                                display:flex;
+                                .kok {
+                                    width:15px;
+                                    height:15px;
+                                    background:#fff;
+                                    border-radius:10px;
+                                    margin:0 3px;
+                                }
+                            }
+                        }
+                    }
+                    .select {
+                        width:100%;
+                        .search {
+                            padding:15px 5px;
+                            input  {
+                                width:100%;
+                                background:$buttoncolor;
+                                color:#fff;
+                                outline:none;
+                                border:none;
+                                padding:10px;
+                                border-radius:5px;
+                                &::placeholder {
+                                    color:#fff;
+                                }
+                            }
+                        }
+                        .names {
+                            width:100%;
+                            .names-gap {
+                                width:100%;
+                                .names-wrap { //ul
+                                    width:100%;
+                                    display:flex;
+                                    flex-flow:wrap;
+                                    .boys-name {
+                                        width:25%;
+                                        padding:5px;
+                                        position:relative;
+                                        label {
+                                            text-align:center;
+                                            input[type='checkbox'] {
+                                                appearance:none;
+                                                width:100%;
+                                                height:60px;
+                                                padding:5px 0;
+                                                border-radius:5px;
+
+                                                &.korea {
+                                                    border:2px solid $koreacolor;
+                                                    &:checked  {
+                                                        background:$koreacolor;
+                                                    }
+                                                }
+                                                &.global {
+                                                    border:2px solid $globalcolor;
+                                                    &:checked  {
+                                                        background:$globalcolor;
+                                                    }
+                                                }
+                                            }
+                                            .labeling {
+                                                position:absolute;
+                                                width:100%;
+                                                height:100%;
+                                                display:flex;
+                                                justify-content:center;
+                                                align-items:center;
+                                                top:0;
+                                                left:0;
+                                                color:#fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .one-pick {
+                    width:100%;
+                    padding:40px 80px;
+                    .title {
+                        width:100%;
+                        .title-gap {
+                            width:100%;
+                            .title-wrap {
+                                width:100%;
+                                padding-bottom:20px;
+                                p {
+                                    text-align:center;
+                                    padding:5px 0;
+                                    font-size:25px;
+                                }
+                            }
+                        }
+                    }
+                    .counting {
+                        width:100%;
+                        .counting-gap {
+                            width:100%;
+                            padding:15px 0;
+                            display:flex;
+                            .counting-wrap {
+                                margin:0 auto;
+                                display:flex;
+                                .kok {
+                                    width:15px;
+                                    height:15px;
+                                    background:#fff;
+                                    border-radius:10px;
+                                    margin:0 3px;
+                                }
+                            }
+                        }
+                    }
+                    .select {
+                        width:100%;
+                        .search {
+                            padding:15px 5px;
+                            input  {
+                                width:100%;
+                                background:$buttoncolor;
+                                color:#fff;
+                                outline:none;
+                                border:none;
+                                padding:10px;
+                                border-radius:5px;
+                                &::placeholder {
+                                    color:#fff;
+                                }
+                            }
+                        }
+                        .names {
+                            width:100%;
+                            .names-gap {
+                                width:100%;
+                                .names-wrap { //ul
+                                    width:100%;
+                                    display:flex;
+                                    flex-flow:wrap;
+                                    .boys-name {
+                                        width:25%;
+                                        padding:5px;
+                                        position:relative;
+                                        label {
+                                            text-align:center;
+                                            input[type='checkbox'] {
+                                                appearance:none;
+                                                width:100%;
+                                                height:60px;
+                                                padding:5px 0;
+                                                border-radius:5px;
+                                                &.korea {
+                                                    border:2px solid $koreacolor;
+                                                    &:checked  {
+                                                        background:$koreacolor;
+                                                    }
+                                                }
+                                                &.global {
+                                                    border:2px solid $globalcolor;
+                                                    &:checked  {
+                                                        background:$globalcolor;
+                                                    }
+                                                }
+                                            }
+                                            .labeling {
+                                                position:absolute;
+                                                width:100%;
+                                                height:100%;
+                                                display:flex;
+                                                justify-content:center;
+                                                align-items:center;
+                                                top:0;
+                                                left:0;
+                                                color:#fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .all-done {
+                    width:100%;
+                    .done-gap {
+                        width:100%;
+                        padding:20px 80px 80px 80px;
+                        .done-wrap {
+                            width:100%;
+                            display:flex;
+                            button {
+                                padding:20px 90px;
+                                background:#fff;
+                                font-size:20px;
+                                margin:0 auto;
+                                background:$buttoncolor;
+                                border-radius:5px;
+                                color:#fff;
+                                &:disabled {
+                                    color:$buttoncolor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #modal {
+                position:fixed;
+                bottom:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:rgba(0,0,0, .3);
+                display:flex;
+                .container {
+                    width:560px;
+                    height:420px;
+                    margin:auto;
+                    padding:80px;
+                    background:$maincolor;
+                    border-radius:10px;
+                    border:3px solid rgb(255, 255, 255, .5);
+                    > ul {
+                        width:100%;
+                        > li {
+                            width:100%;
+                            padding:50px 0;
+                            h2 {
+                                text-align:center;
+                                font-size:35px;
+                            }
+                        }
+                    }
+                    .button-box {
+                        width:100%;
+                        display:flex;
+                        flex-flow:wrap;
+                        a {
+                            width:90%;
+                            text-align:center;
+                            background:$buttoncolor;
+                            margin:10px auto;
+                            padding:15px 0;
+                            color:#fff;
+                            border-radius:5px;
+                            font-size:16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
