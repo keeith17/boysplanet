@@ -162,9 +162,8 @@ const VotePage = ({modalOpenFn}) => {
     const teamCheckList=()=>{
         let result = [];
         for(let i=0; i<boysSelect.boysTeamSelect.length; i++){
-            result.push(boysSelect.boysTeamSelect[i]);
+                result.push(boysSelect.boysTeamSelect[i] + " ");
         }
-        console.log(result);
         return result;
     }
     return (
@@ -224,8 +223,9 @@ const VotePage = ({modalOpenFn}) => {
             <div className="check">
                 <div className="check-gap">
                     <div className="check-wrap">
-                        <p>두 번째 글로벌 투표 (6인):{teamCheckList()}</p>
-                        <p>나의 원 픽:{boysSelect.boysOneSelect}</p>
+                        <p>두 번째 글로벌 투표 (6인):<br/>
+                        {teamCheckList()}</p>
+                        <p>나의 원 픽:<br/>{boysSelect.boysOneSelect}</p>
                     </div>
                 </div>
             </div>

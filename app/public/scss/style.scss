@@ -56,8 +56,10 @@ $globalcolor:#D74696;
                     }
             }
             .vote-wrap {
-                // 헤더 부분 조금 이따가
-
+                #header {
+                    width:100%;
+                    background:$buttoncolor;
+                }
                 .team-pick {
                     width:100%;
                     padding:40px 80px;
@@ -264,6 +266,21 @@ $globalcolor:#D74696;
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+                .check {
+                    width:100%;
+                    .check-gap {
+                        width:100%;
+                        padding:0 80px;
+                        .check-wrap {
+                            width:100%;
+                            p {
+                                font-size:20px;
+                                padding:15px 0;
+                                line-height:25px;
                             }
                         }
                     }
