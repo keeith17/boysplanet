@@ -57,7 +57,6 @@ $globalcolor:#D74696;
             }
             .vote-wrap {
                 // 헤더 부분 조금 이따가
-
                 .team-pick {
                     width:100%;
                     padding:40px 80px;
@@ -286,6 +285,60 @@ $globalcolor:#D74696;
                                 color:#fff;
                                 &:disabled {
                                     color:$buttoncolor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .result-wrap {
+                //헤더 부분
+                .result-gap {
+                    width:100%;
+                    padding:40px 80px;
+                    .title {
+                        width:100%;
+                        .title-gap {
+                            width:100%;
+                            .title-wrap {
+                                width:100%;
+                                p {
+                                    text-align:center;
+                                    padding:5px 0;
+                                    font-size:25px;
+                                }
+                            }
+                        }
+                    }
+                    .contents {
+                        width:100%;
+                        .contents-gap {
+                            width:100%;
+                            padding:20px 0;
+                            .contents-wrap {
+                                width:100%;
+                                .infos {
+                                    width:100%;
+                                    display:flex;
+                                    .times {
+                                        width:50%;
+                                        font-size:18px;
+                                    }
+                                    .filter-box{
+                                        display:flex;
+                                        width:50%;
+                                        align-items:right;
+                                        justify-content:right;
+                                        select {
+                                            width:40%;
+                                            height:25px;
+                                            appearance:none;
+                                            border:none;
+                                            border-radius:5px;
+                                            outline:none;
+                                            padding:5px;
+                                        }
+                                    }
                                 }
                             }
                         }

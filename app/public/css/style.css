@@ -292,6 +292,59 @@
 #root #wrap .wrap-gap .vote-wrap .all-done .done-gap .done-wrap button:disabled {
   color: #322D59;
 }
+#root #wrap .wrap-gap .result-wrap .result-gap {
+  width: 100%;
+  padding: 40px 80px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .title {
+  width: 100%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .title .title-gap {
+  width: 100%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .title .title-gap .title-wrap {
+  width: 100%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .title .title-gap .title-wrap p {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents {
+  width: 100%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap {
+  width: 100%;
+  padding: 20px 0;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap {
+  width: 100%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .infos {
+  width: 100%;
+  display: flex;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .infos .times {
+  width: 50%;
+  font-size: 18px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .infos .filter-box {
+  display: flex;
+  width: 50%;
+  align-items: right;
+  justify-content: right;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .infos .filter-box select {
+  width: 40%;
+  height: 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+}
 #root #wrap .wrap-gap #modal {
   position: fixed;
   bottom: 0;
