@@ -60,7 +60,6 @@ $globalcolor:#D74696;
                     width:100%;
                     background:$buttoncolor;
                 }
-                // 헤더 부분 조금 이따가
                 .team-pick {
                     width:100%;
                     padding:40px 80px;
@@ -311,7 +310,10 @@ $globalcolor:#D74696;
                 }
             }
             .result-wrap {
-                //헤더 부분
+                #header {
+                    width:100%;
+                    background:$buttoncolor;
+                }
                 .result-gap {
                     width:100%;
                     padding:40px 80px;
@@ -341,7 +343,8 @@ $globalcolor:#D74696;
                                     display:flex;
                                     .times {
                                         width:50%;
-                                        font-size:18px;
+                                        font-size:20px;
+                                        line-height:40px;
                                     }
                                     .filter-box{
                                         display:flex;
@@ -350,12 +353,13 @@ $globalcolor:#D74696;
                                         justify-content:right;
                                         select {
                                             width:40%;
-                                            height:25px;
-                                            appearance:none;
+                                            height:40px;                                            padding:10px;
+                                            padding:10px;
                                             border:none;
                                             border-radius:5px;
                                             outline:none;
-                                            padding:5px;
+                                            background:$buttoncolor;
+                                            color:#fff;
                                         }
                                     }
                                 }

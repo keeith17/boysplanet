@@ -16,7 +16,7 @@ const VotePage = ({modalOpenFn}) => {
         {
             boysTeamSelect: [],
             boysOneSelect: '',
-            boysTemaSelectSub: [],
+            boysTeamSelectSub: [],
             boysOneSelectSub:''
         }
     )
@@ -43,9 +43,35 @@ const VotePage = ({modalOpenFn}) => {
         getBoysList();
     }, []);
 
+    //선택 연습생 보내주기
+    const postBoysList = () =>{
+
+        const formData = new FormData();
+
+        formData.append('teamPickSurvey', boysSelect.boysTeamSelectSub);
+        formData.append('onePickSurvey', boysSelect.boysOneSelectSub);
+        for (let value of formData.values()) {
+            console.log(value);
+        }
+
+        //axios({
+        //    url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/survey",
+        //    method:"POST",
+        //    data:formData
+        //}).then((response)=>{
+        //    console.log( `AXIOS 성공: ${response.data}` );
+        //    return;
+        //})
+        //.catch((error)=>{
+        //    console.log( `AXIOS 실패: ${error}` );
+        //    return;
+        //});     
+    }
+
     //모달 오픈
     const onClickModal=()=>{
         console.log('누르고 있음');
+        postBoysList();
         modalOpenFn();
     }
 
@@ -53,18 +79,17 @@ const VotePage = ({modalOpenFn}) => {
     const onChangeTeam=(e)=>{
         let imsi = [];
         let imsi2 = [];
-        console.log(e.target.id);
         if(e.target.checked===true){
             if(boysSelect.boysTeamSelect.length >= 6){
                 alert('여섯 명만 선택 가능합니다!');
             }
             else {
-                setboysSelect({...boysSelect, boysTeamSelect:[...boysSelect.boysTeamSelect, e.target.id], boysTemaSelectSub:[...boysSelect.boysTemaSelectSub, e.target.value]});
+                setboysSelect({...boysSelect, boysTeamSelect:[...boysSelect.boysTeamSelect, e.target.id], boysTeamSelectSub:[...boysSelect.boysTeamSelectSub, e.target.value]});
             }
         } else {
             imsi = boysSelect.boysTeamSelect.filter((item)=>item !== e.target.id);
-            imsi2 = boysSelect.boysTemaSelectSub.filter((item)=>item !== e.target.value);
-            setboysSelect({...boysSelect, boysTeamSelect:imsi, boysTemaSelectSub:imsi2});        }
+            imsi2 = boysSelect.boysTeamSelectSub.filter((item)=>item !== e.target.value);
+            setboysSelect({...boysSelect, boysTeamSelect:imsi, boysTeamSelectSub:imsi2});        }
 
     }
     //원픽 선택시
@@ -146,7 +171,7 @@ const VotePage = ({modalOpenFn}) => {
     //팀 리스트 선택 인원수 체크
     const counting = boysSelect.boysTeamSelect.map(list=>{  
         return (
-            <li className="kok" key={list.boysNum}></li>
+            <li className="kok" key={list.boysNum}> </li>
         )
     })
 

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 import HeaderComponent from './HeaderComponent';
 
@@ -11,6 +12,28 @@ const ResultPage = () => {
         let hours = now.getHours();
         return String(`${year}년 ${month}월 ${date}일 ${hours}시`);
     }
+    const [boysRank, setBoysRank] = useState(
+        {
+            boysRankTeam: [],
+            boysRankOne: []
+        }
+    )
+
+    const getCurrSurvey = () =>{
+        axios({
+            url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/getCurrSurvey",
+            method:"GET",
+        }).then((res)=>{
+            console.log(res.data);
+            setBoysRank({...boysRank, boysRankTeam:res.data.teamResult.boysInfo, boysRankOne:res.data.oneResult.boysInfo})
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+    useEffect(()=>{
+        getCurrSurvey();
+    }, []);
+
     return (
         <div className="result-wrap">
             <HeaderComponent />
