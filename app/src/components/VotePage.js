@@ -88,7 +88,7 @@ const VotePage = ({modalOpenFn}) => {
                 }
         })
         return (
-            <li className='boys-name' key={list.idx}>
+            <li className='boys-name' key={list.boysNum}>
                     <label>
                         <input 
                         type="checkbox"
@@ -122,7 +122,7 @@ const VotePage = ({modalOpenFn}) => {
                 }
         })
         return (
-            <li className='boys-name' key={list.idx}>
+            <li className='boys-name' key={list.boysNum}>
                     <label>
                         <input 
                         type="checkbox"
@@ -146,7 +146,7 @@ const VotePage = ({modalOpenFn}) => {
     //팀 리스트 선택 인원수 체크
     const counting = boysSelect.boysTeamSelect.map(list=>{  
         return (
-            <li className="kok" key={list.idx}></li>
+            <li className="kok" key={list.boysNum}></li>
         )
     })
 
