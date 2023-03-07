@@ -54,6 +54,36 @@
   width: 100%;
   background: #322D59;
 }
+#root #wrap .wrap-gap .vote-wrap #header .header-gap {
+  width: 100%;
+  padding: 10px 20px;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap {
+  width: 100%;
+  display: flex;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap .logo {
+  display: flex;
+  align-items: center;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap .logo a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap .logo a img {
+  width: 200px;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap .reloading {
+  margin: 0 0 0 auto;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap .reloading .reloading-wrap {
+  cursor: pointer;
+}
+#root #wrap .wrap-gap .vote-wrap #header .header-gap .header-wrap .reloading .reloading-wrap i {
+  font-size: 30px;
+  cursor: pointer;
+}
 #root #wrap .wrap-gap .vote-wrap .team-pick {
   width: 100%;
   padding: 40px 11.1111%;
@@ -314,6 +344,36 @@
 #root #wrap .wrap-gap .result-wrap #header {
   width: 100%;
   background: #322D59;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap {
+  width: 100%;
+  padding: 10px 20px;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap {
+  width: 100%;
+  display: flex;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap .logo {
+  display: flex;
+  align-items: center;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap .logo a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap .logo a img {
+  width: 200px;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap .reloading {
+  margin: 0 0 0 auto;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap .reloading .reloading-wrap {
+  cursor: pointer;
+}
+#root #wrap .wrap-gap .result-wrap #header .header-gap .header-wrap .reloading .reloading-wrap i {
+  font-size: 30px;
+  cursor: pointer;
 }
 #root #wrap .wrap-gap .result-wrap .result-gap {
   width: 100%;

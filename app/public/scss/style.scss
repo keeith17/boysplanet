@@ -7,7 +7,42 @@ $subcolor:#1B1546;
 $buttoncolor:#322D59;
 $koreacolor:#3395FE;
 $globalcolor:#D74696;
-
+@mixin header(){
+    #header {
+        width:100%;
+        background:$buttoncolor;
+        .header-gap {
+            width:100%;
+            padding:10px 20px;
+            .header-wrap {
+                width:100%;
+                display:flex;
+                .logo {
+                    display:flex;
+                    align-items:center;
+                    a {
+                        display:block;
+                        color:#fff;
+                        font-size:20px;
+                        img {
+                            width:200px;
+                        }
+                    }
+                }
+                .reloading {
+                    margin:0 0 0 auto;
+                    .reloading-wrap {
+                        cursor:pointer;
+                        i {
+                            font-size:30px;
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 #root {
     width:100%;
     #wrap {
@@ -56,10 +91,7 @@ $globalcolor:#D74696;
                     }
             }
             .vote-wrap {
-                #header {
-                    width:100%;
-                    background:$buttoncolor;
-                }
+                @include header();
                 .team-pick {
                     width:100%;
                     padding:40px 11.1111%;
@@ -310,10 +342,7 @@ $globalcolor:#D74696;
                 }
             }
             .result-wrap {
-                #header {
-                    width:100%;
-                    background:$buttoncolor;
-                }
+                @include header();
                 .result-gap {
                     width:100%;
                     padding:40px 11.111111%;

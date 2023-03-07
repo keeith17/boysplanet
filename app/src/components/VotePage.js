@@ -23,7 +23,8 @@ const VotePage = ({modalOpenFn}) => {
     //검색값 스테이트
     const [searchData, setSearchData] = useState(
         {
-            searchData: ''
+            searchData: '',
+            searchDataOne:''
         }
     )
    
@@ -107,13 +108,21 @@ const VotePage = ({modalOpenFn}) => {
         setboysSelect({...boysSelect, boysOneSelect:e.target.id, boysOneSelectSub:e.target.value});
     }
 
-    //서치 데이터 입력값 스테이트 변경
+    //서치 데이터 입력값 스테이트 변경 (팀)
     const onChangeSearch=(e)=>{
-        setSearchData({searchData:e.target.value});
+        setSearchData({...searchData, searchData:e.target.value});
+    }
+    //서치 데이터 입력값 스테이트 변경 (한명)
+    const onChangeSearchOne=(e)=>{
+        setSearchData({...searchData, searchDataOne:e.target.value});
     }
 
     //팀 리스트 출력 부분
-    const boysTeamPickList = boysList.boysList.map(list=>{  
+    let boysTeamPickList = '';
+    const filtered = boysList.boysList.filter((itemList) => {
+        return itemList.boysKName.includes(searchData.searchData) || itemList.boysEName.toUpperCase().includes(searchData.searchData.toUpperCase());
+    })
+    boysTeamPickList = filtered.map(list=>{  
         let group = String(list.boysType);
         let newGroup = group.replace(/(0|1)/g,function(vl){
                 // eslint-disable-next-line default-case
@@ -147,7 +156,11 @@ const VotePage = ({modalOpenFn}) => {
 
 
     //원픽 리스트 출력 부분
-    const boysOnePickList = boysList.boysList.map(list=>{  
+    let boysOnePickList = '';
+    const filteredOne = boysList.boysList.filter((itemList) => {
+        return itemList.boysKName.includes(searchData.searchDataOne) || itemList.boysEName.toUpperCase().includes(searchData.searchDataOne.toUpperCase());
+    })
+    boysOnePickList = filteredOne.map(list=>{  
         let group = String(list.boysType);
         let newGroup = group.replace(/(0|1)/g,function(vl){
                 // eslint-disable-next-line default-case
@@ -222,7 +235,7 @@ const VotePage = ({modalOpenFn}) => {
                 </div>
                 <div className="select">
                     <div className="search">
-                        <input type="search" onChange={onChangeSearch} placeholder="이름 입력 / Search Name" />
+                        <input type="search" onChange={onChangeSearch} placeholder="이름 검색 / Search Name" />
                     </div>
                     <div className="names">
                         <div className="names-gap">
@@ -244,7 +257,7 @@ const VotePage = ({modalOpenFn}) => {
                 </div>
                 <div className="select">
                     <div className="search">
-                        <input type="search" placeholder="이름 입력 / Search Name" />
+                        <input type="search" onChange={onChangeSearchOne} placeholder="이름 검색 / Search Name" />
                     </div>
                     <div className="names">
                         <div className="names-gap">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import imsiLogo from '../images/임시.png';
+import Logo from '../images/BP-title.png';
 
 
 const MainPage = () => {
@@ -10,7 +10,7 @@ const MainPage = () => {
             <div className="content-gap">
                 <div className="content-wrap">
                     <div className="logo-image">
-                        <img src={imsiLogo} alt="imsi-logo" />
+                        <img src={Logo} alt="logo" />
                     </div>
                     <div className="buttons">
                         <div className="button-wrap">
