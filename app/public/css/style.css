@@ -56,7 +56,7 @@
 }
 #root #wrap .wrap-gap .vote-wrap .team-pick {
   width: 100%;
-  padding: 40px 80px;
+  padding: 40px 11.1111%;
 }
 #root #wrap .wrap-gap .vote-wrap .team-pick .title {
   width: 100%;
@@ -165,7 +165,7 @@
 }
 #root #wrap .wrap-gap .vote-wrap .one-pick {
   width: 100%;
-  padding: 40px 80px;
+  padding: 40px 11.1111%;
 }
 #root #wrap .wrap-gap .vote-wrap .one-pick .title {
   width: 100%;
@@ -278,7 +278,7 @@
 }
 #root #wrap .wrap-gap .vote-wrap .check .check-gap {
   width: 100%;
-  padding: 0 80px;
+  padding: 0 11.1111%;
 }
 #root #wrap .wrap-gap .vote-wrap .check .check-gap .check-wrap {
   width: 100%;
@@ -293,7 +293,7 @@
 }
 #root #wrap .wrap-gap .vote-wrap .all-done .done-gap {
   width: 100%;
-  padding: 20px 80px 80px 80px;
+  padding: 20px 11.1111% 11.1111% 11.1111%;
 }
 #root #wrap .wrap-gap .vote-wrap .all-done .done-gap .done-wrap {
   width: 100%;
@@ -317,7 +317,7 @@
 }
 #root #wrap .wrap-gap .result-wrap .result-gap {
   width: 100%;
-  padding: 40px 80px;
+  padding: 40px 11.111111%;
 }
 #root #wrap .wrap-gap .result-wrap .result-gap .title {
   width: 100%;
@@ -368,6 +368,328 @@
   outline: none;
   background: #322D59;
   color: #fff;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking {
+  width: 100%;
+  padding: 20px 0;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li {
+  width: 100%;
+  padding: 5px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap {
+  width: 100%;
+  padding: 5px;
+  background: #322D59;
+  border-radius: 5px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap p {
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  width: 25%;
+  text-align: center;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap p:nth-child(1) {
+  width: 15%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap p:nth-child(2) {
+  font-weight: 700;
+  font-size: 20px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap p:nth-child(3) {
+  width: 35%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li.korea p:nth-child(2) {
+  color: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li.global p:nth-child(2) {
+  color: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(1).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(2).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(3).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(4).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(5).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(6).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(7).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(8).global .content-wrap {
+  background: #D74696;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9) {
+  width: 33.333%;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9) .content-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9) .content-wrap p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9) .content-wrap p:nth-child(1) {
+  font-size: 25px;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9) .content-wrap p:nth-child(2) {
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9).korea .content-wrap {
+  background: #3395FE;
+}
+#root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li:nth-child(9).global .content-wrap {
+  background: #D74696;
 }
 #root #wrap .wrap-gap #modal {
   position: fixed;

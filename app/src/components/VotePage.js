@@ -46,26 +46,36 @@ const VotePage = ({modalOpenFn}) => {
     //선택 연습생 보내주기
     const postBoysList = () =>{
 
-        const formData = new FormData();
+        // const formData = new FormData();
+        // 
+        // formData.append('teamPickSurvey', boysSelect.boysTeamSelectSub);
+        // formData.append('onePickSurvey', boysSelect.boysOneSelectSub);
+        // for (let value of formData.values()) {
+            // console.log(value);
+        // }
 
-        formData.append('teamPickSurvey', boysSelect.boysTeamSelectSub);
-        formData.append('onePickSurvey', boysSelect.boysOneSelectSub);
-        for (let value of formData.values()) {
-            console.log(value);
+        let teampeackSurveyArr = [];
+        const arr = boysSelect.boysTeamSelectSub;
+        for(let i=0; i<arr.length; i++){
+            teampeackSurveyArr.push(parseInt(arr[i]));
         }
-
-        //axios({
-        //    url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/survey",
-        //    method:"POST",
-        //    data:formData
-        //}).then((response)=>{
-        //    console.log( `AXIOS 성공: ${response.data}` );
-        //    return;
-        //})
-        //.catch((error)=>{
-        //    console.log( `AXIOS 실패: ${error}` );
-        //    return;
-        //});     
+        console.log('teampeackSurveyArr',teampeackSurveyArr);
+        console.log('arr',arr);
+        axios({
+            url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/survey",
+            method:"POST",
+            data:{
+             teamPickSurvey: teampeackSurveyArr,
+             onePickSurvey: parseInt(boysSelect.boysOneSelectSub)
+            }
+         }).then((response)=>{
+            console.log( `AXIOS 성공: ${response.data}` );
+            return;
+         })
+         .catch((error)=>{
+            console.log( `AXIOS 실패: ${error}` );
+            return;
+         });   
     }
 
     //모달 오픈
