@@ -222,7 +222,6 @@
     width: 70%;
     height: 35px;
     padding: 10px;
-    padding: 10px;
   }
   #root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking {
     width: 100%;
@@ -248,7 +247,7 @@
   }
   #root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap p:nth-child(2) {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 16px;
   }
   #root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking .boys-ranking li .content-wrap p:nth-child(3) {
     width: 33%;
