@@ -1,14 +1,9 @@
-@charset "utf-8";
-@import url(./fonts.css);
-@import url(./reset.css);
-
 $maincolor:#120A30;
 $subcolor:#1B1546;
 $buttoncolor:#322D59;
-$hovercolor:#6561897c;
-$hovercolor2:#ffffff0e;
 $koreacolor:#3395FE;
 $globalcolor:#D74696;
+@media all and (max-width:700px){
 @mixin header(){
     #header {
         width:100%;
@@ -46,50 +41,25 @@ $globalcolor:#D74696;
     }
 }
 #root {
-    width:100%;
     #wrap {
-        width:100%;
         .wrap-gap {
-            max-width:720px;
-            width:100%;
-            margin:0 auto;
-            background:$subcolor;
             .main-wrap {
-                    width:100%;
-                    height:100vh;
-                    display:flex;
                     .content-gap {
                         width:100%;
                         margin:auto;
-                        padding:0 80px 0 80px;
+                        padding:0 8% 0 8%;
                         .content-wrap {
-                            width:100%;
                             .logo-image {
-                                width:100%;
-                                padding:0 0 60px 0;
                                 img {
                                     width:100%;
                                 }
                             }
                             .buttons {
-                                width:100%;
-                                padding:0 0 17px 0;
                                 .button-wrap {
                                     padding:15px 0;
                                     width:100%;
                                     a {
-                                        display:block;
-                                        width:100%;
-                                        background:$buttoncolor;
-                                        color:#fff;
-                                        font-size:35px;
-                                        text-align:center;
-                                        padding:20px 0;
-                                        border-radius:10px;
-                                        transition:all .3s;
-                                        &:hover {
-                                            background:$hovercolor;
-                                        }
+                                        font-size:25px;
                                     }
                                 }
                             }        
@@ -100,83 +70,47 @@ $globalcolor:#D74696;
                 @include header();
                 .team-pick {
                     width:100%;
-                    padding:40px 11.1111%;
+                    padding:8% 8%;
                     .title {
-                        width:100%;
                         .title-gap {
-                            width:100%;
                             .title-wrap {
-                                width:100%;
                                 p {
                                     text-align:center;
-                                    padding:5px 0;
-                                    font-size:25px;
+                                    font-size:18px;
                                 }
                             }
                         }
                     }
                     .counting {
-                        width:100%;
                         .counting-gap {
-                            width:100%;
-                            padding:15px 0 5px 0;
-                            display:flex;
+                            padding:10px 0;
                             .counting-wrap {
-                                height:15px;
-                                margin:0 auto;
-                                display:flex;
                                 .kok {
-                                    width:15px;
-                                    height:15px;
-                                    background:#fff;
-                                    border-radius:10px;
+                                    width:12px;
+                                    height:12px;
                                     margin:0 3px;
                                 }
                             }
                         }
                     }
                     .select {
-                        width:100%;
                         .search {
-                            padding:15px 5px;
                             input  {
-                                width:100%;
-                                background:$buttoncolor;
-                                color:#fff;
-                                outline:none;
-                                border:none;
-                                padding:10px;
-                                border-radius:5px;
                                 &::placeholder {
                                     color:#fff;
                                 }
                             }
                         }
                         .names {
-                            width:100%;
                             .names-gap {
-                                width:100%;
                                 .names-wrap { //ul
-                                    width:100%;
-                                    display:flex;
-                                    flex-flow:wrap;
                                     .boys-name {
-                                        width:25%;
-                                        padding:5px;
+                                        width:33.333%;
+                                        padding:3px;
                                         position:relative;
                                         label {
-                                            text-align:center;
                                             input[type='checkbox'] {
-                                                appearance:none;
-                                                width:100%;
-                                                height:60px;
-                                                padding:5px 0;
-                                                border-radius:5px;
-                                                &:hover {
-                                                    background:$hovercolor2;
-                                                }
                                                 &.korea {
-                                                    border:2px solid $koreacolor;
                                                     &:checked  {
                                                         background:$koreacolor;
                                                     }
@@ -198,14 +132,6 @@ $globalcolor:#D74696;
                                                 top:0;
                                                 left:0;
                                                 color:#fff;
-                                                p {
-                                                    span {
-                                                        font-size:17px;
-                                                        &:nth-child(2){
-                                                            font-size:11px;
-                                                        }
-                                                    }
-                                                }
                                             }
                                         }
                                     }
@@ -216,83 +142,47 @@ $globalcolor:#D74696;
                 }
                 .one-pick {
                     width:100%;
-                    padding:40px 11.1111%;
+                    padding:8% 8%;
                     .title {
-                        width:100%;
                         .title-gap {
-                            width:100%;
                             .title-wrap {
-                                width:100%;
-                                padding-bottom:20px;
                                 p {
                                     text-align:center;
-                                    padding:5px 0;
-                                    font-size:25px;
+                                    font-size:18px;
                                 }
                             }
                         }
                     }
                     .counting {
-                        width:100%;
                         .counting-gap {
-                            width:100%;
-                            padding:15px 0;
-                            display:flex;
+                            padding:10px 0;
                             .counting-wrap {
-                                margin:0 auto;
-                                display:flex;
                                 .kok {
-                                    width:15px;
-                                    height:15px;
-                                    background:#fff;
-                                    border-radius:10px;
+                                    width:12px;
+                                    height:12px;
                                     margin:0 3px;
                                 }
                             }
                         }
                     }
                     .select {
-                        width:100%;
                         .search {
-                            padding:15px 5px;
                             input  {
-                                width:100%;
-                                background:$buttoncolor;
-                                color:#fff;
-                                outline:none;
-                                border:none;
-                                padding:10px;
-                                border-radius:5px;
                                 &::placeholder {
                                     color:#fff;
                                 }
                             }
                         }
                         .names {
-                            width:100%;
                             .names-gap {
-                                width:100%;
                                 .names-wrap { //ul
-                                    width:100%;
-                                    display:flex;
-                                    flex-flow:wrap;
                                     .boys-name {
-                                        width:25%;
-                                        padding:5px;
+                                        width:33.333%;
+                                        padding:3px;
                                         position:relative;
                                         label {
-                                            text-align:center;
                                             input[type='checkbox'] {
-                                                appearance:none;
-                                                width:100%;
-                                                height:60px;
-                                                padding:5px 0;
-                                                border-radius:5px;
-                                                &:hover {
-                                                    background:$hovercolor2;
-                                                }
                                                 &.korea {
-                                                    border:2px solid $koreacolor;
                                                     &:checked  {
                                                         background:$koreacolor;
                                                     }
@@ -314,14 +204,6 @@ $globalcolor:#D74696;
                                                 top:0;
                                                 left:0;
                                                 color:#fff;
-                                                p {
-                                                    span {
-                                                        font-size:17px;
-                                                        &:nth-child(2){
-                                                            font-size:11px;
-                                                        }
-                                                    }
-                                                }
                                             }
                                         }
                                     }
@@ -331,46 +213,28 @@ $globalcolor:#D74696;
                     }
                 }
                 .check {
-                    width:100%;
                     .check-gap {
-                        width:100%;
-                        padding:0 11.1111%;
+                        padding:0 8%;
                         .check-wrap {
-                            width:100%;
                             p {
-                                font-size:20px;
-                                padding:15px 0;
+                                font-size:17px;
+                                padding:10px 0;
                                 line-height:25px;
                             }
                         }
                     }
                 }
                 .all-done {
-                    width:100%;
                     .done-gap {
-                        width:100%;
-                        padding:20px 11.1111% 11.1111% 11.1111%;
+                        padding:20px 8% 8% 8%;
                         .done-wrap {
-                            width:100%;
-                            display:flex;
                             button {
-                                padding:20px 90px;
-                                background:#fff;
-                                font-size:20px;
-                                margin:0 auto;
+                                padding:15px 90px;
                                 background:$buttoncolor;
                                 border-radius:5px;
                                 color:#fff;
-                                transition:all .3s;
                                 &:disabled {
-                                    background:$subcolor;
-                                    color:$subcolor;
-                                    &:hover {
-                                        background:$subcolor;
-                                    }
-                                }
-                                &:hover {
-                                    background:$hovercolor;
+                                    color:$buttoncolor;
                                 }
                             }
                         }
@@ -381,35 +245,26 @@ $globalcolor:#D74696;
                 @include header();
                 .result-gap {
                     width:100%;
-                    padding:40px 11.111111%;
+                    padding:8% 8%;
                     .title {
-                        width:100%;
                         .title-gap {
-                            width:100%;
                             .title-wrap {
-                                width:100%;
                                 p {
                                     text-align:center;
-                                    padding:5px 0;
-                                    font-size:25px;
+                                    font-size:18px;
                                 }
                             }
                         }
                     }
                     .contents {
-                        width:100%;
                         .contents-gap {
-                            width:100%;
-                            padding:20px 0;
+                            padding:10px 0;
                             .contents-wrap {
-                                width:100%;
                                 .infos {
-                                    width:100%;
-                                    display:flex;
                                     .times {
                                         width:50%;
-                                        font-size:20px;
-                                        line-height:40px;
+                                        font-size:15px;
+                                        line-height:35px;
                                     }
                                     .filter-box{
                                         display:flex;
@@ -417,48 +272,37 @@ $globalcolor:#D74696;
                                         align-items:right;
                                         justify-content:right;
                                         select {
-                                            width:40%;
-                                            height:40px;                                            padding:10px;
+                                            width:70%;
+                                            height:35px;                                            padding:10px;
                                             padding:10px;
-                                            border:none;
-                                            border-radius:5px;
-                                            outline:none;
-                                            background:$buttoncolor;
-                                            color:#fff;
                                         }
                                     }
                                 }
                                 .ranking {
                                     width:100%;
-                                    padding:20px 0;
+                                    padding:10px 0;
                                     .boys-ranking {
-                                        width:100%;
-                                        display:flex;
-                                        flex-flow:wrap;
                                         li {
-                                            width:100%;
-                                            padding:5px;
+                                            padding:3px;
                                             .content-wrap {
                                                 width:100%;
-                                                padding:5px;
+                                                padding:0;
                                                 background:$buttoncolor;
                                                 border-radius:5px;
                                                 p {
-                                                    display:inline-block;
-                                                    padding:10px;
-                                                    font-weight:500;
-                                                    font-size:18px;
+                                                    padding:10px 0;
+                                                    font-size:11px;
                                                     width:25%;
                                                     text-align:center;
                                                     &:nth-child(1){
-                                                        width:15%;
+                                                        width:17%;
                                                     }
                                                     &:nth-child(2){
                                                         font-weight:700;
-                                                        font-size:20px;
+                                                        font-size:17px;
                                                     }
                                                     &:nth-child(3){
-                                                        width:35%;
+                                                        width:33%;
                                                     }
                                                 }
                                             }
@@ -480,22 +324,21 @@ $globalcolor:#D74696;
                                                 &:nth-child(#{$i}){
                                                     width:33.333%;
                                                     .content-wrap {
-                                                        width:100%;
-                                                        padding:15px 0;
+                                                        padding:2px;
                                                         border-radius:10px;
                                                         p {
                                                             display:block;
                                                             width:100%;
                                                             text-align:center;
-                                                            padding:10px 0;
-                                                            font-size:18px;
+                                                            padding:7px 0;
+                                                            font-size:11px;
                                                             font-weight:500;
                                                             &:nth-child(1){
-                                                                font-size:25px;
+                                                                font-size:18px;
                                                             }
                                                             &:nth-child(2){
                                                                 padding:0;
-                                                                font-size:30px;
+                                                                font-size:23px;
                                                                 font-weight:700;
                                                                 color:white;
                                                             }
@@ -522,49 +365,25 @@ $globalcolor:#D74696;
                 }
             }
             #modal {
-                position:fixed;
-                bottom:0;
-                left:0;
-                width:100%;
-                height:100%;
-                background:rgba(0,0,0, .3);
-                display:flex;
                 .container {
-                    width:560px;
-                    height:420px;
-                    margin:auto;
-                    padding:80px;
-                    background:$maincolor;
-                    border-radius:10px;
-                    border:3px solid rgb(255, 255, 255, .5);
+                    width:85vw;
+                    height:300px;
+                    padding:30px 25px;
                     > ul {
-                        width:100%;
                         > li {
-                            width:100%;
-                            padding:50px 0;
+                            padding:35px 0;
                             h2 {
                                 text-align:center;
-                                font-size:35px;
+                                font-size:28px;
                             }
                         }
                     }
                     .button-box {
-                        width:100%;
-                        display:flex;
-                        flex-flow:wrap;
+                        padding:5px 0;
                         a {
-                            width:90%;
-                            text-align:center;
-                            background:$buttoncolor;
-                            margin:10px auto;
+                            margin:7px auto;
                             padding:15px 0;
-                            color:#fff;
-                            border-radius:5px;
                             font-size:16px;
-                            transition:all .3s;
-                            &:hover {
-                                background:$hovercolor;
-                            }
                         }
                     }
                 }
@@ -572,4 +391,4 @@ $globalcolor:#D74696;
         }
     }
 }
-
+}

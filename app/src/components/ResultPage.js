@@ -26,11 +26,17 @@ const ResultPage = () => {
             voteCountOne: []
         }
     )
-    //합친 어레이 스테이트
+    //합친 어레이(실시간투표 연습생정보 + 받은투표수) 스테이트
     const [ranking, setRanking] = useState(
         {
             boysRankingTeam:[],
             boysRankingOne:[]
+        }
+    )
+    //오피셜 투표 스테이트
+    const [official, setOfficial] = useState(
+        {
+            officialRanking:[]
         }
     )
     //셀렉트 필터
@@ -46,7 +52,7 @@ const ResultPage = () => {
     //정보 받아오는 부분
     const getCurrSurvey = () =>{
         axios({
-            url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/getCurrSurvey",
+            url: "http://boysplanet.me:8080/getCurrSurvey",
             method:"GET",
         }).then((res)=>{
             console.log(res.data);
@@ -56,8 +62,20 @@ const ResultPage = () => {
             console.log(err);
         })
     }
+    const getOfficeSurvey = () =>{
+        axios({
+            url: "http://boysplanet.me:8080/getOfficialInfo?ep=5",
+            method:"GET",
+        }).then((res)=>{
+            console.log('official', res.data);
+            setOfficial({...official, officialRanking:res.data.data});
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
     useEffect(()=>{
         getCurrSurvey();
+        getOfficeSurvey();
     }, []);
 
     //어레이 오브젝트 합쳐 보기 (팀)
@@ -77,24 +95,12 @@ const ResultPage = () => {
         console.log('한명기준',mergeArr2);
         setRanking({...ranking, boysRankingTeam:mergeArr, boysRankingOne:mergeArr2}); 
     }
-    //const rearrayOne=()=>{
-    //    const map = new Map ();
-    //    boysRank.boysRankOne.forEach(item => map.set(item.boysNum, item));
-    //    voteCount.voteCountOne.forEach(item => map.set(item.boysNum, {...map.get(item.boysNum), ...item}));
-    //    const mergeArr = Array.from(map.values());
-    //    console.log('한명기준',mergeArr);
-    //    setRanking({...ranking, boysRankingOne:mergeArr});    
-    //}
+
     useEffect(()=>{
         rearray();
         thisTimes();
     }, [boysRank]);
-    //useEffect(()=>{
-    //    rearrayTeam();
-    //}, [boysRank.boysRankTeam]);
-    //useEffect(()=>{
-    //    rearrayOne();
-    //}, [boysRank.boysRankOne]);
+
 
     //map으로 팀 필터 경우 출력
     let boysTeamRankList = '';
@@ -114,7 +120,7 @@ const ResultPage = () => {
                         <p>{index+1}위</p>
                         <p>{list.boysKName}</p>
                         <p>{list.boysEName}</p>
-                        <p>{list.boysKVote + list.boysGVote}표</p>
+                        <p>{(list.boysKVote + list.boysGVote).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}표</p>
                     </div>
                 </li>
             )
@@ -135,7 +141,28 @@ const ResultPage = () => {
                         <p>{index+1}위</p>
                         <p>{list.boysKName}</p>
                         <p>{list.boysEName}</p>
-                        <p>{list.boysKVote + list.boysGVote}표</p>
+                        <p>{(list.boysKVote + list.boysGVote).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}표</p>
+                    </div>
+                </li>
+            )
+        })
+    } else if(filter.filtered.includes('forOff')) {
+        boysTeamRankList = official.officialRanking.map((list,index)=>{  
+            let group = String(list.boysType);
+            let newGroup = group.replace(/(0|1)/g,function(vl){
+                    // eslint-disable-next-line default-case
+                    switch(vl){
+                     case '0' : return 'korea'; 
+                     case '1' : return 'global'; 
+                    }
+            })
+            return (
+                <li className={newGroup} key={list.boysNum}>
+                    <div className="content-wrap">
+                        <p>{index+1}위</p>
+                        <p>{list.boysKName}</p>
+                        <p>{list.boysEName}</p>
+                        <p>{list.boysAVote.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}표</p>
                     </div>
                 </li>
             )

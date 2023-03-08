@@ -9,6 +9,11 @@ import ModalComponent from './ModalComponent';
 
 
 const WrapComponent = () => {
+    window.onbeforeunload = (e) => {
+        var dialogText = 'Dialog text here';
+        e.returnValue = dialogText;
+        return dialogText;
+    };
     const [modal, setModal] = useState(
         {
             isShow:false

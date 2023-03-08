@@ -31,7 +31,7 @@ const VotePage = ({modalOpenFn}) => {
     //연습생 목록 데이터 받기
     const getBoysList = () =>{
         axios({
-            url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/getBoysList",
+            url: "http://boysplanet.me:8080/getBoysList",
             method:"GET",
         }).then((res)=>{
             console.log(res);
@@ -46,15 +46,6 @@ const VotePage = ({modalOpenFn}) => {
 
     //선택 연습생 보내주기
     const postBoysList = () =>{
-
-        // const formData = new FormData();
-        // 
-        // formData.append('teamPickSurvey', boysSelect.boysTeamSelectSub);
-        // formData.append('onePickSurvey', boysSelect.boysOneSelectSub);
-        // for (let value of formData.values()) {
-            // console.log(value);
-        // }
-
         let teampeackSurveyArr = [];
         const arr = boysSelect.boysTeamSelectSub;
         for(let i=0; i<arr.length; i++){
@@ -63,7 +54,7 @@ const VotePage = ({modalOpenFn}) => {
         console.log('teampeackSurveyArr',teampeackSurveyArr);
         console.log('arr',arr);
         axios({
-            url: "http://ec2-3-37-249-208.ap-northeast-2.compute.amazonaws.com:8080/survey",
+            url: "http://boysplanet.me:8080/survey",
             method:"POST",
             data:{
              teamPickSurvey: teampeackSurveyArr,
@@ -144,8 +135,8 @@ const VotePage = ({modalOpenFn}) => {
                         value={list.boysNum} />
                         <div className='labeling'>
                         <p>
-                        {list.boysKName}<br/>
-                        {list.boysEName}
+                        <span>{list.boysKName}<br/></span>
+                        <span>{list.boysEName}<br/></span>
                         </p>
                         </div>
                     </label>
@@ -182,8 +173,8 @@ const VotePage = ({modalOpenFn}) => {
                         value={list.boysNum} />
                         <div className='labeling'>
                         <p>
-                        {list.boysKName}<br/>
-                        {list.boysEName}
+                        <span>{list.boysKName}<br/></span>
+                        <span>{list.boysEName}<br/></span>
                         </p>
                         </div>
                     </label>
@@ -194,7 +185,7 @@ const VotePage = ({modalOpenFn}) => {
     //팀 리스트 선택 인원수 체크
     const counting = boysSelect.boysTeamSelect.map(list=>{  
         return (
-            <li className="kok" key={list.boysNum}> </li>
+            <li className="kok" key={list.boysNum}></li>
         )
     })
 

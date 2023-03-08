@@ -49,6 +49,10 @@
   text-align: center;
   padding: 20px 0;
   border-radius: 10px;
+  transition: all 0.3s;
+}
+#root #wrap .wrap-gap .main-wrap .content-gap .content-wrap .buttons .button-wrap a:hover {
+  background: rgba(101, 97, 137, 0.4862745098);
 }
 #root #wrap .wrap-gap .vote-wrap #header {
   width: 100%;
@@ -107,10 +111,11 @@
 }
 #root #wrap .wrap-gap .vote-wrap .team-pick .counting .counting-gap {
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 0 5px 0;
   display: flex;
 }
 #root #wrap .wrap-gap .vote-wrap .team-pick .counting .counting-gap .counting-wrap {
+  height: 15px;
   margin: 0 auto;
   display: flex;
 }
@@ -170,6 +175,9 @@
   padding: 5px 0;
   border-radius: 5px;
 }
+#root #wrap .wrap-gap .vote-wrap .team-pick .select .names .names-gap .names-wrap .boys-name label input[type=checkbox]:hover {
+  background: rgba(255, 255, 255, 0.0549019608);
+}
 #root #wrap .wrap-gap .vote-wrap .team-pick .select .names .names-gap .names-wrap .boys-name label input[type=checkbox].korea {
   border: 2px solid #3395FE;
 }
@@ -192,6 +200,12 @@
   top: 0;
   left: 0;
   color: #fff;
+}
+#root #wrap .wrap-gap .vote-wrap .team-pick .select .names .names-gap .names-wrap .boys-name label .labeling p span {
+  font-size: 17px;
+}
+#root #wrap .wrap-gap .vote-wrap .team-pick .select .names .names-gap .names-wrap .boys-name label .labeling p span:nth-child(2) {
+  font-size: 11px;
 }
 #root #wrap .wrap-gap .vote-wrap .one-pick {
   width: 100%;
@@ -280,6 +294,9 @@
   padding: 5px 0;
   border-radius: 5px;
 }
+#root #wrap .wrap-gap .vote-wrap .one-pick .select .names .names-gap .names-wrap .boys-name label input[type=checkbox]:hover {
+  background: rgba(255, 255, 255, 0.0549019608);
+}
 #root #wrap .wrap-gap .vote-wrap .one-pick .select .names .names-gap .names-wrap .boys-name label input[type=checkbox].korea {
   border: 2px solid #3395FE;
 }
@@ -302,6 +319,12 @@
   top: 0;
   left: 0;
   color: #fff;
+}
+#root #wrap .wrap-gap .vote-wrap .one-pick .select .names .names-gap .names-wrap .boys-name label .labeling p span {
+  font-size: 17px;
+}
+#root #wrap .wrap-gap .vote-wrap .one-pick .select .names .names-gap .names-wrap .boys-name label .labeling p span:nth-child(2) {
+  font-size: 11px;
 }
 #root #wrap .wrap-gap .vote-wrap .check {
   width: 100%;
@@ -337,9 +360,17 @@
   background: #322D59;
   border-radius: 5px;
   color: #fff;
+  transition: all 0.3s;
 }
 #root #wrap .wrap-gap .vote-wrap .all-done .done-gap .done-wrap button:disabled {
-  color: #322D59;
+  background: #1B1546;
+  color: #1B1546;
+}
+#root #wrap .wrap-gap .vote-wrap .all-done .done-gap .done-wrap button:disabled:hover {
+  background: #1B1546;
+}
+#root #wrap .wrap-gap .vote-wrap .all-done .done-gap .done-wrap button:hover {
+  background: rgba(101, 97, 137, 0.4862745098);
 }
 #root #wrap .wrap-gap .result-wrap #header {
   width: 100%;
@@ -794,4 +825,8 @@
   color: #fff;
   border-radius: 5px;
   font-size: 16px;
+  transition: all 0.3s;
+}
+#root #wrap .wrap-gap #modal .container .button-box a:hover {
+  background: rgba(101, 97, 137, 0.4862745098);
 }
