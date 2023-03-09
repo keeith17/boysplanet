@@ -11,7 +11,7 @@ const ResultPage = () => {
         let date = now.getDate();
         let hours = now.getHours();
         if(filter.filtered.includes('forOff')){
-            return '첫번째 생존자 발표식 기준';
+            return '6회(3/9) 기준';
         } else {
             return String(`${year}년 ${month}월 ${date}일 ${hours}시`);
         }
@@ -67,7 +67,7 @@ const ResultPage = () => {
     }
     const getOfficeSurvey = () =>{
         axios({
-            url: "http://boysplanet.hkamio.com:8080/getOfficialInfo?ep=5",
+            url: "http://boysplanet.hkamio.com:8080/getOfficialInfo?ep=6",
             method:"GET",
         }).then((res)=>{
             setOfficial({...official, officialRanking:res.data.data});
@@ -162,7 +162,7 @@ const ResultPage = () => {
                         <p>{index+1}위</p>
                         <p>{list.boysKName}</p>
                         <p>{list.boysEName}</p>
-                        <p>{list.boysAVote.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}표</p>
+                        <p>{list.boysAVote.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}점</p>
                     </div>
                 </li>
             )
