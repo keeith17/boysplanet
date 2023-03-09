@@ -7,6 +7,9 @@
   #root #wrap .wrap-gap .main-wrap .content-gap .content-wrap .logo-image img {
     width: 100%;
   }
+  #root #wrap .wrap-gap .main-wrap .content-gap .content-wrap .guide p {
+    font-size: 15px;
+  }
   #root #wrap .wrap-gap .main-wrap .content-gap .content-wrap .buttons .button-wrap {
     padding: 15px 0;
     width: 100%;
@@ -222,6 +225,7 @@
     width: 70%;
     height: 35px;
     padding: 10px;
+    font-size: 14px;
   }
   #root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .ranking {
     width: 100%;

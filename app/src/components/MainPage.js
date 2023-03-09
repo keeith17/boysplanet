@@ -12,6 +12,14 @@ const MainPage = () => {
                     <div className="logo-image">
                         <img src={Logo} alt="logo" />
                     </div>
+                    <div className="guide">
+                        <p>
+                        실제 투표가 아닌 여론 조사 서비스입니다.
+                        </p>
+                        <p>
+                        크롬 또는 사파리로 접속하세요.
+                        </p>
+                    </div>
                     <div className="buttons">
                         <div className="button-wrap">
                             <Link to="/VotePage">투표하러 가기</Link>
