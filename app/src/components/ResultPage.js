@@ -52,10 +52,9 @@ const ResultPage = () => {
     //정보 받아오는 부분
     const getCurrSurvey = () =>{
         axios({
-            url: "http://boysplanet.me:8080/getCurrSurvey",
+            url: "http://boysplanet.hkamio.com:8080/getCurrSurvey",
             method:"GET",
         }).then((res)=>{
-            console.log(res.data);
             setBoysRank({...boysRank, boysRankTeam:res.data.teamResult.boysInfo, boysRankOne:res.data.oneResult.boysInfo});
             setVoteCount({...voteCount, voteCountTeam:res.data.teamResult.teamVoteInfo, voteCountOne:res.data.oneResult.oneVoteInfo});
         }).catch((err)=>{
@@ -64,10 +63,9 @@ const ResultPage = () => {
     }
     const getOfficeSurvey = () =>{
         axios({
-            url: "http://boysplanet.me:8080/getOfficialInfo?ep=5",
+            url: "http://boysplanet.hkamio.com:8080/getOfficialInfo?ep=5",
             method:"GET",
         }).then((res)=>{
-            console.log('official', res.data);
             setOfficial({...official, officialRanking:res.data.data});
         }).catch((err)=>{
             console.log(err);
@@ -85,14 +83,12 @@ const ResultPage = () => {
         boysRank.boysRankTeam.forEach(item => map.set(item.boysNum, item));
         voteCount.voteCountTeam.forEach(item => map.set(item.boysNum, {...map.get(item.boysNum), ...item}));
         const mergeArr = Array.from(map.values());
-        console.log('여섯기준',mergeArr);
         setRanking({...ranking, boysRankingTeam:mergeArr});
         
         const map2 = new Map ();
         boysRank.boysRankOne.forEach(item => map2.set(item.boysNum, item));
         voteCount.voteCountOne.forEach(item => map2.set(item.boysNum, {...map2.get(item.boysNum), ...item}));
         const mergeArr2 = Array.from(map2.values());
-        console.log('한명기준',mergeArr2);
         setRanking({...ranking, boysRankingTeam:mergeArr, boysRankingOne:mergeArr2}); 
     }
 

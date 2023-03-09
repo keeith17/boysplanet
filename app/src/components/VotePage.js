@@ -31,10 +31,9 @@ const VotePage = ({modalOpenFn}) => {
     //연습생 목록 데이터 받기
     const getBoysList = () =>{
         axios({
-            url: "http://boysplanet.me:8080/getBoysList",
+            url: "http://boysplanet.hkamio.com:8080/getBoysList",
             method:"GET",
         }).then((res)=>{
-            console.log(res);
             setboysList({boysList:res.data});
         }).catch((err)=>{
             console.log(err);
@@ -51,17 +50,14 @@ const VotePage = ({modalOpenFn}) => {
         for(let i=0; i<arr.length; i++){
             teampeackSurveyArr.push(parseInt(arr[i]));
         }
-        console.log('teampeackSurveyArr',teampeackSurveyArr);
-        console.log('arr',arr);
         axios({
-            url: "http://boysplanet.me:8080/survey",
+            url: "http://boysplanet.hkamio.com:8080/survey",
             method:"POST",
             data:{
              teamPickSurvey: teampeackSurveyArr,
              onePickSurvey: parseInt(boysSelect.boysOneSelectSub)
             }
          }).then((response)=>{
-            console.log( `AXIOS 성공: ${response.data}` );
             return;
          })
          .catch((error)=>{
@@ -72,7 +68,6 @@ const VotePage = ({modalOpenFn}) => {
 
     //모달 오픈
     const onClickModal=()=>{
-        console.log('누르고 있음');
         postBoysList();
         modalOpenFn();
     }
