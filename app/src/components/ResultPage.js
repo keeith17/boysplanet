@@ -10,7 +10,11 @@ const ResultPage = () => {
         let month = now.getMonth()+1;
         let date = now.getDate();
         let hours = now.getHours();
-        return String(`${year}년 ${month}월 ${date}일 ${hours}시`);
+        if(filter.filtered.includes('forOff')){
+            return '첫번째 생존자 발표식 기준';
+        } else {
+            return String(`${year}년 ${month}월 ${date}일 ${hours}시`);
+        }
     }
     //연습생 정보 스테이트
     const [boysRank, setBoysRank] = useState(

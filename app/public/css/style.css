@@ -34,7 +34,7 @@
 }
 #root #wrap .wrap-gap .main-wrap .content-gap .content-wrap .buttons {
   width: 100%;
-  padding: 0 0 17px 0;
+  padding: 0 10% 17px 10%;
 }
 #root #wrap .wrap-gap .main-wrap .content-gap .content-wrap .buttons .button-wrap {
   padding: 15px 0;

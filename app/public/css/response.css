@@ -209,7 +209,7 @@
   }
   #root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .infos .times {
     width: 50%;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 35px;
   }
   #root #wrap .wrap-gap .result-wrap .result-gap .contents .contents-gap .contents-wrap .infos .filter-box {
@@ -538,7 +538,7 @@
   }
   #root #wrap .wrap-gap #modal .container > ul > li h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
   }
   #root #wrap .wrap-gap #modal .container .button-box {
     padding: 5px 0;
