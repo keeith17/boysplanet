@@ -56,7 +56,7 @@ const ResultPage = () => {
     //정보 받아오는 부분
     const getCurrSurvey = () =>{
         axios({
-            url: "http://boysplanet.hkamio.com:8080/getCurrSurvey",
+            url: "http://boysplanet.hkamio.com:8080/getCurrSurvey?isDead=0",
             method:"GET",
         }).then((res)=>{
             setBoysRank({...boysRank, boysRankTeam:res.data.teamResult.boysInfo, boysRankOne:res.data.oneResult.boysInfo});

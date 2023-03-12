@@ -31,7 +31,7 @@ const VotePage = ({modalOpenFn}) => {
     //연습생 목록 데이터 받기
     const getBoysList = () =>{
         axios({
-            url: "http://boysplanet.hkamio.com:8080/getBoysList",
+            url: "http://boysplanet.hkamio.com:8080/getBoysList?isDead=0&sort=kor",
             method:"GET",
         }).then((res)=>{
             setboysList({boysList:res.data});
