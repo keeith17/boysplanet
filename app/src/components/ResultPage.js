@@ -11,7 +11,7 @@ const ResultPage = () => {
         let date = now.getDate();
         let hours = now.getHours();
         if(filter.filtered.includes('forOff')){
-            return '6회(3/9) 기준';
+            return '8회(3/23) 기준';
         } else {
             return String(`${year}년 ${month}월 ${date}일 ${hours}시`);
         }
@@ -67,7 +67,7 @@ const ResultPage = () => {
     }
     const getOfficeSurvey = () =>{
         axios({
-            url: "http://boysplanet.hkamio.com:8080/getOfficialInfo?ep=6",
+            url: "http://boysplanet.hkamio.com:8080/getOfficialInfo?ep=8",
             method:"GET",
         }).then((res)=>{
             setOfficial({...official, officialRanking:res.data.data});
