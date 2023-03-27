@@ -190,7 +190,7 @@ const ResultPage = () => {
                                 </div>
                                 <div className="filter-box">
                                     <select onChange={onChangeSelect}>
-                                        <option value="forSix">6인 기준</option>
+                                        <option value="forSix">3인 기준</option>
                                         <option value="forOne">원픽 기준</option>
                                         <option value="forOff">방송 순위</option>
                                     </select>
