@@ -77,8 +77,8 @@ const VotePage = ({modalOpenFn}) => {
         let imsi = [];
         let imsi2 = [];
         if(e.target.checked===true){
-            if(boysSelect.boysTeamSelect.length >= 6){
-                alert('여섯 명만 선택 가능합니다!');
+            if(boysSelect.boysTeamSelect.length >= 3){
+                alert('세 명만 선택 가능합니다!');
             }
             else {
                 setboysSelect({...boysSelect, boysTeamSelect:[...boysSelect.boysTeamSelect, e.target.id], boysTeamSelectSub:[...boysSelect.boysTeamSelectSub, e.target.value]});
@@ -186,7 +186,7 @@ const VotePage = ({modalOpenFn}) => {
 
     //투표 완료 버튼
     const allDoneBtn=()=>{
-        if(boysSelect.boysTeamSelect.length>5 && boysSelect.boysOneSelect.length>0){
+        if(boysSelect.boysTeamSelect.length>2 && boysSelect.boysOneSelect.length>0){
             return <button onClick={onClickModal}>투표 완료</button>
         } else {
             return <button disabled>투표 완료</button>
@@ -207,8 +207,8 @@ const VotePage = ({modalOpenFn}) => {
                 <div className="title">
                     <div className="title-gap">
                         <div className="title-wrap">
-                            <p>두 번째 글로벌 투표 (6인)</p>
-                            <p>The Second Global Vote (6 members)</p>
+                            <p>세 번째 글로벌 투표 (3인)</p>
+                            <p>The Third Global Vote (3 members)</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@ const VotePage = ({modalOpenFn}) => {
             <div className="check">
                 <div className="check-gap">
                     <div className="check-wrap">
-                        <p>두 번째 글로벌 투표 (6인):<br/>
+                        <p>세 번째 글로벌 투표 (3인):<br/>
                         {teamCheckList()}</p>
                         <p>나의 원 픽:<br/>{boysSelect.boysOneSelect}</p>
                     </div>
